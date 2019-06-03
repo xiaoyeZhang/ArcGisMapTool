@@ -6,7 +6,7 @@
 
 然后将ArcGIS可执行文件放到Pods/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework 目录下
 
-##(注意:有可以利用CocoaPods导入,不过需要翻墙,国内貌似下载不了)
+## 注意:有可以利用CocoaPods导入,不过需要翻墙,国内貌似下载不了
 
 # 一、加载天地图(TianDiTu2.0)
 # 第一步：先将TianDiTu2.0目录拷贝到项目中
