@@ -1,7 +1,7 @@
 
 ### 这里使用的ArcGIS版本是100.4
 
-## 我将ArcGIS的可执行文件放到百度网盘中,如果缺少ArcGIS可执行文件可以通过网盘下载ArcGIS可执行文件
+## 我将ArcGIS的可执行文件放到百度网盘中,如果缺少ArcGIS可执行文件(或者报错)可以通过网盘下载ArcGIS可执行文件
 链接: https://pan.baidu.com/s/1aXS7YAhzK8ufMhRPp4cCWA 提取码: rpxj 
 
 然后将ArcGIS可执行文件放到Pods/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework 目录下
