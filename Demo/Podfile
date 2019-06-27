@@ -1,0 +1,9 @@
+platform :ios, '11.0'
+target 'MapWorld' do
+
+use_frameworks! 
+
+pod 'ArcGIS-Runtime-SDK-iOS'
+pod 'Masonry'
+
+end
