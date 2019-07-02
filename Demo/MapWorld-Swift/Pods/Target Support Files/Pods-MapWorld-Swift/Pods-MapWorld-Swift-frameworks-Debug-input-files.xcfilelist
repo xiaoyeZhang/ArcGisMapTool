@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-MapWorld-Swift/Pods-MapWorld-Swift-frameworks.sh
+${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework
+${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework.dSYM
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework

@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		DF9AE63C23004EB90FD7A2D9B1D27450 /* ArcGIS-Runtime-SDK-iOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CF7F54C99F8383D3702037037E413F59 /* Build configuration list for PBXAggregateTarget "ArcGIS-Runtime-SDK-iOS" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "ArcGIS-Runtime-SDK-iOS";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		179B87E40C468C64276091ACCDEBCE85 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A15594AA302E52D2B2922734997D1E3 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A053F235858ABF8EFE482048759932E /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA67A7DDC03AD374DF9FABF0B25510E /* MASViewAttribute.m */; };
+		20751225299BA95559F1BF121BB3A775 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023B3121FBF92754B3F1ABCD485E53B /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D2AC53BAE6F1A4034FB2B6620C4D2EC /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FFCD6B778D5749037B20BF93922D48E8 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31CE3E5A72D1B491256651281745C79D /* Pods-MapWorld-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A44749BF86C8390B99B3E8E8B380BCCD /* Pods-MapWorld-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3910831115ECE36964FEBCE61E0BCDAF /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A40630B561B0F37BDEFD3F52481ABF /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4799D7DDB099CE2E6BBC8B96DE6B6EFB /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F1F83ABC57D5BD6E3231F5302961FC /* ViewController+MASAdditions.m */; };
+		584F97CCAC4689E7B01ED0CF343498C0 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B21911C3F4AFC651F789D28F58353 /* NSArray+MASAdditions.m */; };
+		638179457800E16C4961F13E32301CEF /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 051E7200000BA3FADB74B4F85DB77A02 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64AE8C7580AEAC6EA20480AB31767C9C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F4E9017078D6B2A6753F9BB743EBF /* MASLayoutConstraint.m */; };
+		64F37F59EC050CBCB383870F07328DAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		6A568FDA5DFB1409946293485AD7732E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		6E9D4D54FCD4CDC3643316297A4DD76E /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C02BB54BDB1571C21A561A8EB8DC9957 /* MASConstraintMaker.m */; };
+		6F7519F84AAB817A005944968F47E66D /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD5A11FBEB503535B1EE1C2ACF084A6 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B034334E4270ECA86A6B046029768B9 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A791154BEFEB0473A4EDC20DCD51FABD /* View+MASAdditions.m */; };
+		7C1A1DE6C4AA35B8DD4EACD0F929CA85 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = F2CEFA4C382CB55B1847653E5E01D2D9 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80EDD78C47C8E647D7B0F4F9A5E1C205 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE80D3451A3E4F09EB3720176C1F0CC /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95E1D99388EC0E78346383A521686B72 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8DC24F17803601B68A0F64241456B /* MASCompositeConstraint.m */; };
+		9B71A0AC5657E3DD3C37C38D9DBC8D6F /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B9D5ECEF6754C55450C149BA3B89D2 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BB55A94C2FCFC0078D34E6C77CFF39C /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B25E827C54A8E79E78A13496E8BF8E3 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3D9ACE3050523DE9344B0BA520A5508 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D57704C5822D4AA24B93F0A27A497201 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB57EDE55302C1143E3600F09C98E1B2 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FEEF18EC61869FF07488A0493F2F446 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB5DAB0FC80289D95CD206CC66FAC7BC /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F35D196FDCEC7E86CFECAFA20FCC73 /* MASConstraint.m */; };
+		AD3D9E0384BE0FC3F725A8C279EE3BC1 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E705D73CCFDEA128A77A54120D1EA8 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3D307C1CFEDF5EC8DB65A184FBB2B0F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D6AD0C415E2A5378C3F75F0E1274DB5D /* MASViewConstraint.m */; };
+		BC28215ED1B90CDB1C264CFD6EC56744 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A05A559332E453B9BF5F489D73C5CD5 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C65B8F5D1137D5437BA9E2DE6B226957 /* Pods-MapWorld-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6447E8C17A59F772EE06EEB616AD4 /* Pods-MapWorld-Swift-dummy.m */; };
+		CE184D54E06D1129482B7F2601433B4D /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26140C680C4F02FF521E21BAAFF29407 /* Masonry-dummy.m */; };
+		D419F9E85AFBB921925A61A8D1F4A3F5 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A3123165C46F34E01F1464FD70256E0E /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA39253F9D10084909E3F753FC075F52 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C06AD980B38B9B56B15EB52F5AAC625F /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE4DB30EEA9AC0AC00EB2E618BD90C11 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E565DA2369F803C1F54F12CDA63ED6 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		FFD5BF61B424EBD4A831804037A372E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D4E9549852FA3CF558C2FF5400C0EEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF9AE63C23004EB90FD7A2D9B1D27450;
+			remoteInfo = "ArcGIS-Runtime-SDK-iOS";
+		};
+		AB0A78A36BF6E797A536D62D3F00705C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00F35D196FDCEC7E86CFECAFA20FCC73 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		051E7200000BA3FADB74B4F85DB77A02 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		0AA67A7DDC03AD374DF9FABF0B25510E /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		0FEEF18EC61869FF07488A0493F2F446 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		1893FC5FA0EDF52A91BF19C095B9EA1B /* Pods-MapWorld-Swift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MapWorld-Swift-frameworks.sh"; sourceTree = "<group>"; };
+		25E565DA2369F803C1F54F12CDA63ED6 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		26140C680C4F02FF521E21BAAFF29407 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		284C1BD99506D78FB61162F361BDF1CE /* Pods-MapWorld-Swift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MapWorld-Swift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A15594AA302E52D2B2922734997D1E3 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		3023B3121FBF92754B3F1ABCD485E53B /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DE80D3451A3E4F09EB3720176C1F0CC /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		45B2BE6F98AD49E862E32FF4BB10255F /* Pods-MapWorld-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapWorld-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		46FBB6A183B4A80B2E96DB2162722670 /* Pods-MapWorld-Swift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapWorld-Swift-acknowledgements.plist"; sourceTree = "<group>"; };
+		4A05A559332E453B9BF5F489D73C5CD5 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		4CB55BC96404921F2B1A2048B3BF3C02 /* Pods-MapWorld-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MapWorld-Swift.modulemap"; sourceTree = "<group>"; };
+		504B0BF1EB6E313A1591718B04C627C2 /* ArcGIS-Runtime-SDK-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ArcGIS-Runtime-SDK-iOS.xcconfig"; sourceTree = "<group>"; };
+		7C1F4E9017078D6B2A6753F9BB743EBF /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		8C4BD18717B76AC4DD0A021D25029470 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		8EF6447E8C17A59F772EE06EEB616AD4 /* Pods-MapWorld-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MapWorld-Swift-dummy.m"; sourceTree = "<group>"; };
+		8FE8DC24F17803601B68A0F64241456B /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		93B3B278295A88C0058F91EF26F48206 /* Pods-MapWorld-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapWorld-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		96A14DE9D28A83B91D7C60ECC96E61FB /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ArcGIS.framework; sourceTree = "<group>"; };
+		9B25E827C54A8E79E78A13496E8BF8E3 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		9CD5A11FBEB503535B1EE1C2ACF084A6 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3123165C46F34E01F1464FD70256E0E /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		A44749BF86C8390B99B3E8E8B380BCCD /* Pods-MapWorld-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MapWorld-Swift-umbrella.h"; sourceTree = "<group>"; };
+		A791154BEFEB0473A4EDC20DCD51FABD /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		B0A40630B561B0F37BDEFD3F52481ABF /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		B53BB7B865C205ACCD30C093B5A68C52 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
+		B8F1F83ABC57D5BD6E3231F5302961FC /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		C02BB54BDB1571C21A561A8EB8DC9957 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		C06AD980B38B9B56B15EB52F5AAC625F /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		C07B21911C3F4AFC651F789D28F58353 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		D1E705D73CCFDEA128A77A54120D1EA8 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		D57704C5822D4AA24B93F0A27A497201 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		D6AD0C415E2A5378C3F75F0E1274DB5D /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		E4D6B7C717E5F1AB9AC45576B02699B1 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5934329F78C5BF5B5DDD345134DC6D4 /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
+		E6B9D5ECEF6754C55450C149BA3B89D2 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		E9D66867A497B2E2C38EAA4C8F221368 /* Pods_MapWorld_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MapWorld_Swift.framework; path = "Pods-MapWorld-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CEFA4C382CB55B1847653E5E01D2D9 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		F3AFAAF9D9B035D45BC41F9E6DA75F3F /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		F4BF483DA2C3CFE722A50AD03D318EAE /* Pods-MapWorld-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapWorld-Swift-Info.plist"; sourceTree = "<group>"; };
+		FFCD6B778D5749037B20BF93922D48E8 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C1E3A95E883FDFBDFCB23330263203F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFD5BF61B424EBD4A831804037A372E6 /* Foundation.framework in Frameworks */,
+				64F37F59EC050CBCB383870F07328DAA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EFE1B65676BABAC8B84EF8A604A3FD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A568FDA5DFB1409946293485AD7732E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		113A5C72BD055A39325F290EE32B45E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				504B0BF1EB6E313A1591718B04C627C2 /* ArcGIS-Runtime-SDK-iOS.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ArcGIS-Runtime-SDK-iOS";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48A63E6C7F8562783BB0691494AEF455 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				D57704C5822D4AA24B93F0A27A497201 /* MASCompositeConstraint.h */,
+				8FE8DC24F17803601B68A0F64241456B /* MASCompositeConstraint.m */,
+				A3123165C46F34E01F1464FD70256E0E /* MASConstraint.h */,
+				00F35D196FDCEC7E86CFECAFA20FCC73 /* MASConstraint.m */,
+				9B25E827C54A8E79E78A13496E8BF8E3 /* MASConstraint+Private.h */,
+				3DE80D3451A3E4F09EB3720176C1F0CC /* MASConstraintMaker.h */,
+				C02BB54BDB1571C21A561A8EB8DC9957 /* MASConstraintMaker.m */,
+				E6B9D5ECEF6754C55450C149BA3B89D2 /* MASLayoutConstraint.h */,
+				7C1F4E9017078D6B2A6753F9BB743EBF /* MASLayoutConstraint.m */,
+				0FEEF18EC61869FF07488A0493F2F446 /* Masonry.h */,
+				4A05A559332E453B9BF5F489D73C5CD5 /* MASUtilities.h */,
+				F2CEFA4C382CB55B1847653E5E01D2D9 /* MASViewAttribute.h */,
+				0AA67A7DDC03AD374DF9FABF0B25510E /* MASViewAttribute.m */,
+				FFCD6B778D5749037B20BF93922D48E8 /* MASViewConstraint.h */,
+				D6AD0C415E2A5378C3F75F0E1274DB5D /* MASViewConstraint.m */,
+				C06AD980B38B9B56B15EB52F5AAC625F /* NSArray+MASAdditions.h */,
+				C07B21911C3F4AFC651F789D28F58353 /* NSArray+MASAdditions.m */,
+				2A15594AA302E52D2B2922734997D1E3 /* NSArray+MASShorthandAdditions.h */,
+				B0A40630B561B0F37BDEFD3F52481ABF /* NSLayoutConstraint+MASDebugAdditions.h */,
+				25E565DA2369F803C1F54F12CDA63ED6 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				051E7200000BA3FADB74B4F85DB77A02 /* View+MASAdditions.h */,
+				A791154BEFEB0473A4EDC20DCD51FABD /* View+MASAdditions.m */,
+				D1E705D73CCFDEA128A77A54120D1EA8 /* View+MASShorthandAdditions.h */,
+				3023B3121FBF92754B3F1ABCD485E53B /* ViewController+MASAdditions.h */,
+				B8F1F83ABC57D5BD6E3231F5302961FC /* ViewController+MASAdditions.m */,
+				55968798729C59CA9D085EE073C007A6 /* Support Files */,
+			);
+			name = Masonry;
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		55968798729C59CA9D085EE073C007A6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B53BB7B865C205ACCD30C093B5A68C52 /* Masonry.modulemap */,
+				8C4BD18717B76AC4DD0A021D25029470 /* Masonry.xcconfig */,
+				26140C680C4F02FF521E21BAAFF29407 /* Masonry-dummy.m */,
+				E5934329F78C5BF5B5DDD345134DC6D4 /* Masonry-Info.plist */,
+				F3AFAAF9D9B035D45BC41F9E6DA75F3F /* Masonry-prefix.pch */,
+				9CD5A11FBEB503535B1EE1C2ACF084A6 /* Masonry-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		6FA9ECCD4694F2FB1BD4A956C7937ADB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D79A5D6372706C5AE37D00C3E060604C /* Pods-MapWorld-Swift */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7F7BC4324FE79309C0C9471C9AEF793D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F34A92D4CAE7C56C5A15A3FE80094680 /* ArcGIS-Runtime-SDK-iOS */,
+				48A63E6C7F8562783BB0691494AEF455 /* Masonry */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9C173D403E92A013C7EC175BF21988FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4D6B7C717E5F1AB9AC45576B02699B1 /* Masonry.framework */,
+				E9D66867A497B2E2C38EAA4C8F221368 /* Pods_MapWorld_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6AC9A5F05077C53FAD05BBC6E2CB578 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96A14DE9D28A83B91D7C60ECC96E61FB /* ArcGIS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				7F7BC4324FE79309C0C9471C9AEF793D /* Pods */,
+				9C173D403E92A013C7EC175BF21988FC /* Products */,
+				6FA9ECCD4694F2FB1BD4A956C7937ADB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D79A5D6372706C5AE37D00C3E060604C /* Pods-MapWorld-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4CB55BC96404921F2B1A2048B3BF3C02 /* Pods-MapWorld-Swift.modulemap */,
+				284C1BD99506D78FB61162F361BDF1CE /* Pods-MapWorld-Swift-acknowledgements.markdown */,
+				46FBB6A183B4A80B2E96DB2162722670 /* Pods-MapWorld-Swift-acknowledgements.plist */,
+				8EF6447E8C17A59F772EE06EEB616AD4 /* Pods-MapWorld-Swift-dummy.m */,
+				1893FC5FA0EDF52A91BF19C095B9EA1B /* Pods-MapWorld-Swift-frameworks.sh */,
+				F4BF483DA2C3CFE722A50AD03D318EAE /* Pods-MapWorld-Swift-Info.plist */,
+				A44749BF86C8390B99B3E8E8B380BCCD /* Pods-MapWorld-Swift-umbrella.h */,
+				93B3B278295A88C0058F91EF26F48206 /* Pods-MapWorld-Swift.debug.xcconfig */,
+				45B2BE6F98AD49E862E32FF4BB10255F /* Pods-MapWorld-Swift.release.xcconfig */,
+			);
+			name = "Pods-MapWorld-Swift";
+			path = "Target Support Files/Pods-MapWorld-Swift";
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F34A92D4CAE7C56C5A15A3FE80094680 /* ArcGIS-Runtime-SDK-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A6AC9A5F05077C53FAD05BBC6E2CB578 /* Frameworks */,
+				113A5C72BD055A39325F290EE32B45E1 /* Support Files */,
+			);
+			name = "ArcGIS-Runtime-SDK-iOS";
+			path = "ArcGIS-Runtime-SDK-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8923782F62D88AF6F6FC177A5BF9248B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D9ACE3050523DE9344B0BA520A5508 /* MASCompositeConstraint.h in Headers */,
+				9BB55A94C2FCFC0078D34E6C77CFF39C /* MASConstraint+Private.h in Headers */,
+				D419F9E85AFBB921925A61A8D1F4A3F5 /* MASConstraint.h in Headers */,
+				80EDD78C47C8E647D7B0F4F9A5E1C205 /* MASConstraintMaker.h in Headers */,
+				9B71A0AC5657E3DD3C37C38D9DBC8D6F /* MASLayoutConstraint.h in Headers */,
+				6F7519F84AAB817A005944968F47E66D /* Masonry-umbrella.h in Headers */,
+				AB57EDE55302C1143E3600F09C98E1B2 /* Masonry.h in Headers */,
+				BC28215ED1B90CDB1C264CFD6EC56744 /* MASUtilities.h in Headers */,
+				7C1A1DE6C4AA35B8DD4EACD0F929CA85 /* MASViewAttribute.h in Headers */,
+				2D2AC53BAE6F1A4034FB2B6620C4D2EC /* MASViewConstraint.h in Headers */,
+				DA39253F9D10084909E3F753FC075F52 /* NSArray+MASAdditions.h in Headers */,
+				179B87E40C468C64276091ACCDEBCE85 /* NSArray+MASShorthandAdditions.h in Headers */,
+				3910831115ECE36964FEBCE61E0BCDAF /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				638179457800E16C4961F13E32301CEF /* View+MASAdditions.h in Headers */,
+				AD3D9E0384BE0FC3F725A8C279EE3BC1 /* View+MASShorthandAdditions.h in Headers */,
+				20751225299BA95559F1BF121BB3A775 /* ViewController+MASAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC85064B0B0915620E904F680711F135 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31CE3E5A72D1B491256651281745C79D /* Pods-MapWorld-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		55AF53E6C77A10ED4985E04D74A8878E /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7964FEECC30DBE46B643F8DD34A835C /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				8923782F62D88AF6F6FC177A5BF9248B /* Headers */,
+				0561526121A9F7A0530354D3FAF8F54D /* Sources */,
+				3C1E3A95E883FDFBDFCB23330263203F /* Frameworks */,
+				94F1D38151CB787DCDF119BD0454392E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masonry;
+			productName = Masonry;
+			productReference = E4D6B7C717E5F1AB9AC45576B02699B1 /* Masonry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0B4A8C782435819DAF67A70D6E7E087 /* Pods-MapWorld-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C4797924F040F55EC17BE7BD5EA8704 /* Build configuration list for PBXNativeTarget "Pods-MapWorld-Swift" */;
+			buildPhases = (
+				DC85064B0B0915620E904F680711F135 /* Headers */,
+				D5C31030E772DDFC73356DA2A97E5888 /* Sources */,
+				8EFE1B65676BABAC8B84EF8A604A3FD1 /* Frameworks */,
+				2A460849A9F033CB70304B38856720AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93F980384A77414AD1A5E6C775982154 /* PBXTargetDependency */,
+				E393A755CB6F216431174490177494C6 /* PBXTargetDependency */,
+			);
+			name = "Pods-MapWorld-Swift";
+			productName = "Pods-MapWorld-Swift";
+			productReference = E9D66867A497B2E2C38EAA4C8F221368 /* Pods_MapWorld_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9C173D403E92A013C7EC175BF21988FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF9AE63C23004EB90FD7A2D9B1D27450 /* ArcGIS-Runtime-SDK-iOS */,
+				55AF53E6C77A10ED4985E04D74A8878E /* Masonry */,
+				C0B4A8C782435819DAF67A70D6E7E087 /* Pods-MapWorld-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A460849A9F033CB70304B38856720AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94F1D38151CB787DCDF119BD0454392E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0561526121A9F7A0530354D3FAF8F54D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95E1D99388EC0E78346383A521686B72 /* MASCompositeConstraint.m in Sources */,
+				AB5DAB0FC80289D95CD206CC66FAC7BC /* MASConstraint.m in Sources */,
+				6E9D4D54FCD4CDC3643316297A4DD76E /* MASConstraintMaker.m in Sources */,
+				64AE8C7580AEAC6EA20480AB31767C9C /* MASLayoutConstraint.m in Sources */,
+				CE184D54E06D1129482B7F2601433B4D /* Masonry-dummy.m in Sources */,
+				1A053F235858ABF8EFE482048759932E /* MASViewAttribute.m in Sources */,
+				B3D307C1CFEDF5EC8DB65A184FBB2B0F /* MASViewConstraint.m in Sources */,
+				584F97CCAC4689E7B01ED0CF343498C0 /* NSArray+MASAdditions.m in Sources */,
+				FE4DB30EEA9AC0AC00EB2E618BD90C11 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				7B034334E4270ECA86A6B046029768B9 /* View+MASAdditions.m in Sources */,
+				4799D7DDB099CE2E6BBC8B96DE6B6EFB /* ViewController+MASAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C31030E772DDFC73356DA2A97E5888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65B8F5D1137D5437BA9E2DE6B226957 /* Pods-MapWorld-Swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93F980384A77414AD1A5E6C775982154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ArcGIS-Runtime-SDK-iOS";
+			target = DF9AE63C23004EB90FD7A2D9B1D27450 /* ArcGIS-Runtime-SDK-iOS */;
+			targetProxy = 0D4E9549852FA3CF558C2FF5400C0EEB /* PBXContainerItemProxy */;
+		};
+		E393A755CB6F216431174490177494C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = AB0A78A36BF6E797A536D62D3F00705C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D82716787180739FD1FB88F86D8B25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4BD18717B76AC4DD0A021D25029470 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		526FACF1B1BD617C97E1D303E90896C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4BD18717B76AC4DD0A021D25029470 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		55C6E7D6960972F10F83C9035733E029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504B0BF1EB6E313A1591718B04C627C2 /* ArcGIS-Runtime-SDK-iOS.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E0044F9666337551C9CB5311EDF2D02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504B0BF1EB6E313A1591718B04C627C2 /* ArcGIS-Runtime-SDK-iOS.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E320F09D255A5780F69E8270B597EFC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45B2BE6F98AD49E862E32FF4BB10255F /* Pods-MapWorld-Swift.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MapWorld-Swift/Pods-MapWorld-Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MapWorld-Swift/Pods-MapWorld-Swift.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FF349D5696F58FE35AE77B031E85C068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93B3B278295A88C0058F91EF26F48206 /* Pods-MapWorld-Swift.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MapWorld-Swift/Pods-MapWorld-Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MapWorld-Swift/Pods-MapWorld-Swift.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C4797924F040F55EC17BE7BD5EA8704 /* Build configuration list for PBXNativeTarget "Pods-MapWorld-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF349D5696F58FE35AE77B031E85C068 /* Debug */,
+				E320F09D255A5780F69E8270B597EFC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF7F54C99F8383D3702037037E413F59 /* Build configuration list for PBXAggregateTarget "ArcGIS-Runtime-SDK-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0044F9666337551C9CB5311EDF2D02A /* Debug */,
+				55C6E7D6960972F10F83C9035733E029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7964FEECC30DBE46B643F8DD34A835C /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526FACF1B1BD617C97E1D303E90896C1 /* Debug */,
+				0D82716787180739FD1FB88F86D8B25F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
