@@ -1,0 +1,20 @@
+PODS:
+  - ArcGIS-Runtime-SDK-iOS (100.5)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - ArcGIS-Runtime-SDK-iOS
+  - Masonry
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ArcGIS-Runtime-SDK-iOS
+    - Masonry
+
+SPEC CHECKSUMS:
+  ArcGIS-Runtime-SDK-iOS: 6ca566b2e38eaf58d27d976439ee3ef456376e72
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: b5a0bfcae7356d1b59850c858c10be9009df4778
+
+COCOAPODS: 1.7.0
