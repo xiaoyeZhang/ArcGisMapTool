@@ -31,18 +31,15 @@ class ViewController: UIViewController {
     
     var featureArr:NSArray!
     
-    var TDT_typeDic:NSMutableDictionary!
-    
+    var TDT_typeDic:[String:Any] = [:]
+
     var locationBtn:UIButton = UIButton()
     
     var MeasuringLengthBtn:UIButton = UIButton()
     var MeasuringAreaBtn:UIButton = UIButton()
-
     
     var otherBtn:UIButton = UIButton()
 
-//
-//    var calloutView:UIView
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,19 +51,18 @@ class ViewController: UIViewController {
             make?.edges.mas_equalTo()
         }
         
-        TDT_typeDic = NSMutableDictionary()
-        
         self.map = AGSMap()
 
         self.polyline = GISMapTool.init().initWithAGSMapView(mapView: self.mapView)
 
         self.loadingSlyMap(type: TianDiTuLayerType.TDT_VECTOR)
+        self.loadingSlyMap(type: TianDiTuLayerType.TDT_IMAGE)
+
+        self.map.basemap.baseLayers.setArray(TDT_typeDic["TDT_VECTOR"] as! [Any])
+        
+        self.mapView.map = self.map
         
         locationBtn.setImage(UIImage.init(named: "定位"), for: .normal)
-        
-//        self.map.operationalLayers.addObjects(from: TDT_typeDic.object(forKey: TianDiTuLayerType.TDT_VECTOR) as! [Any])
-//        
-//        self.mapView.map = self.map
         
         locationBtn.addTarget(self, action: #selector(LocationClick), for: .touchUpInside)
         self.view.addSubview(locationBtn)
@@ -80,9 +76,6 @@ class ViewController: UIViewController {
         }
         
         self.LocationClick(sender: locationBtn)
-
-        
-//        self.MeasuringLengthClick(sender: locationBtn)
         
         self.view.addSubview(MeasuringLengthBtn)
         MeasuringLengthBtn.OperationType = NSString(string: ZXYBtnOperationType.ZXYMapViewOperationTypeLine.rawValue) as String
@@ -145,12 +138,23 @@ class ViewController: UIViewController {
         let ltlArr = [ltl1,ltl2]
         
 //        self.map.operationalLayers.addObjects(from: ltlArr)
-        
-        self.map.basemap.baseLayers.setArray(ltlArr)
-        
-        self.mapView.map = self.map
-        
-//        TDT_typeDic.setValue(ltlArr, forKey: "TDT_VECTOR")
+//
+//        self.map.basemap.baseLayers.setArray(ltlArr)
+//
+//        self.mapView.map = self.map
+
+        switch (type) {
+        case .TDT_VECTOR:
+            
+            TDT_typeDic["TDT_VECTOR"] = ltlArr as Any
+            break;
+        case .TDT_IMAGE:
+            TDT_typeDic["TDT_IMAGE"] = ltlArr as Any
+
+            break;
+        default:
+            break;
+        }
         
     }
     
