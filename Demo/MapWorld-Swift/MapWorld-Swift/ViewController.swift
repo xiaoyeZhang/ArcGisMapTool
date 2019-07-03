@@ -70,7 +70,6 @@ class ViewController: UIViewController {
         
         locationBtn.addTarget(self, action: #selector(LocationClick), for: .touchUpInside)
         self.view.addSubview(locationBtn)
-//        locationBtn.OperationType = NSString(string: ZXYBtnOperationType.ZXYMapViewOperationTypeArea.rawValue) as String
 
         locationBtn.mas_makeConstraints { (make:MASConstraintMaker?) in
             
@@ -116,7 +115,6 @@ class ViewController: UIViewController {
         }
         
         otherBtn.backgroundColor = UIColor.white
-//        otherBtn.OperationType = NSString(string: ZXYBtnOperationType.ZXYMapViewOperationTypeArea.rawValue) as String
 
         otherBtn.setTitle("图层", for: .normal)
         otherBtn.setTitleColor(UIColor.black, for: .normal)
