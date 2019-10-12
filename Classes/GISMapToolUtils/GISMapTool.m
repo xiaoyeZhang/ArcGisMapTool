@@ -38,6 +38,8 @@
 
 @property (copy, nonatomic) NSArray *featureArr;
 
+@property (assign, nonatomic) BOOL featurSelectReturn;
+
 @end
 
 @implementation GISMapTool
@@ -178,10 +180,7 @@
 
     }
     
-    self.mapView = mapView;
-    
-    self.mapView.touchDelegate = self;
-    self.mapView.callout.delegate = self;
+    [self setMapDelegate:mapView];
     
     self.featureTable = [AGSServiceFeatureTable serviceFeatureTableWithURL:[NSURL URLWithString:url]];
     
@@ -217,6 +216,63 @@
         
     }];
     
+    
+}
+
+- (void)AddResourceLayer:(AGSMapView *)mapView ResourceLayers:(nonnull NSArray<NSDictionary *> *)mapLayers
+{
+
+    [self.mapView.callout dismiss];
+
+    [self setMapDelegate:mapView];
+    
+    NSMutableArray *MapLayerArrs = [NSMutableArray array];
+    
+    for (NSDictionary *mapDic in mapLayers){
+        
+        if ([[self.OperationTypeDic allKeys] containsObject:[mapDic objectForKey:@"Name"]]) {
+            
+            
+        }else{
+            
+            AGSServiceFeatureTable *featureTable = [AGSServiceFeatureTable serviceFeatureTableWithURL:[NSURL URLWithString:[mapDic objectForKey:@"Url"]]];
+            
+            AGSFeatureLayer *featureLayer = [AGSFeatureLayer featureLayerWithFeatureTable:featureTable];
+             
+            if (self.selectionColor != nil) {
+                
+                 if ([self isPropertyExist:@"selectionProperties" Class:[AGSGeoView class]]) {
+                     
+                     self.mapView.selectionProperties.color = self.selectionColor;
+
+                 }else{
+                     
+                     featureLayer.selectionColor = [UIColor cyanColor];
+                 }
+             }
+            
+            [self.OperationTypeDic setValue:featureLayer forKey:[mapDic objectForKey:@"Name"]];
+
+            [self.OperationTypeArr addObject:[mapDic objectForKey:@"Name"]];
+            
+            [MapLayerArrs addObject:featureLayer];
+
+        }
+
+    }
+
+    if ([MapLayerArrs count] > 0) {
+
+        [self.mapView.map.operationalLayers addObjectsFromArray:MapLayerArrs];
+
+    }
+}
+
+- (void)setMapDelegate:(AGSMapView *)mapView{
+    
+    self.mapView = mapView;
+    self.mapView.touchDelegate = self;
+    self.mapView.callout.delegate = self;
     
 }
 
@@ -269,6 +325,8 @@
         
         self.OperationTypeDic = [NSMutableDictionary dictionary];
         
+        self.featurSelectReturn = NO;
+
     }
     
     return self;
@@ -292,15 +350,15 @@
 
 - (void)setInstanceMapView:(AGSMapView *)mapView{
     
-    self.mapView = mapView;
-    self.mapView.touchDelegate = self;
-    self.mapView.callout.delegate = self;
+    [self setMapDelegate:mapView];
     
     [self.mapView.graphicsOverlays addObjectsFromArray:@[self.overlayer,self.StartOverlayer,self.EndOverlayer,self.LineGraphicsOverlay,self.PolyGraphicsOverlay,self.TextOverlayer]];
     
 }
 
 - (void)removeAllObjects{
+    
+    [self.mapView.callout dismiss];
     
     [self.overlayer.graphics removeAllObjects];
     [self.StartOverlayer.graphics removeAllObjects];
@@ -309,20 +367,31 @@
     [self.LineGraphicsOverlay.graphics removeAllObjects];
     [self.PolyGraphicsOverlay.graphics removeAllObjects];
     
+    [self.mapView.map.operationalLayers removeAllObjects];
     [self.OperationTypeArr removeAllObjects];
-    
+    [self.OperationTypeDic removeAllObjects];
 }
 
 - (void)removeResourceLayerForKey:(id)key{
     
     if ([[self.OperationTypeDic allKeys] containsObject:key]) {
         
+       for(AGSFeatureLayer * featureLayer in self.mapView.map.operationalLayers)
+          {
+              if([featureLayer isEqual:[self.OperationTypeDic objectForKey:key]])
+              {
+                  [self.mapView.map.operationalLayers removeObject:featureLayer];
+
+                  [self.OperationTypeDic removeObjectForKey:key];
+                  [self.OperationTypeArr removeObject:key];
+              }
+        }
         
     }else{
         
-        [self.mapView.map.operationalLayers removeAllObjects];
-
-        [self.OperationTypeDic removeAllObjects];
+//        [self.mapView.map.operationalLayers removeAllObjects];
+//
+//        [self.OperationTypeDic removeAllObjects];
     }
     
 }
@@ -469,6 +538,7 @@
         
         [featureLayer selectFeaturesWithQuery:queryParams mode:AGSSelectionModeNew completion:^(AGSFeatureQueryResult * _Nullable featureQueryResult, NSError * _Nullable error) {
             
+            
             if (error) {
                 
             }
@@ -484,12 +554,19 @@
                         
                         [self.featureLayer selectFeatures:identifyResult.geoElements];
 
-                        self.CalloutForGraphicBlock(identifyResult.geoElements, mapPoint, featureLayer);
+                        if (!self.featurSelectReturn) {
+                                                  
+                              self.CalloutForGraphicBlock(identifyResult.geoElements, mapPoint, featureLayer);
+
+                              self.featurSelectReturn = YES;
+                          }
                         
                         return ;
                     }
                 }else{
                     
+                    self.featurSelectReturn = NO;
+
                     [featureLayer resetRenderer];
                     
                 }
@@ -498,6 +575,8 @@
             
         }];
     }
+    self.featurSelectReturn = NO;
+
     
 }
 
@@ -561,6 +640,92 @@
     }
     
     return isExist;
+}
+
+#pragma mark - 周边结果
+- (void)searchMapDataPoint:(AGSPoint *)selectedPoint FeatureTable:(nonnull AGSServiceFeatureTable *)SearchFeatureTable SearchExtent:(double)searchExtent{
+    
+    [self.mapView.callout dismiss];
+
+    AGSServiceFeatureTable *featureTable;
+    AGSFeatureLayer *featureLayer;
+    
+    for (AGSFeatureLayer *tempLayer in self.mapView.map.operationalLayers)
+    {
+        [tempLayer setVisible:NO];
+        
+        AGSServiceFeatureTable *tempfeatureTable = (AGSServiceFeatureTable *)tempLayer.featureTable;
+        
+        NSString *urlStr = tempfeatureTable.URL.absoluteString;
+        
+        if ([urlStr isEqualToString:SearchFeatureTable.URL.absoluteString]) {
+            
+            featureTable = tempfeatureTable;
+            featureLayer = tempLayer;
+        }
+    }
+    
+    if (searchExtent == 0) {
+        
+        searchExtent = 500.0;
+    }
+
+    AGSPolygon *visiblePolygon = [AGSGeometryEngine bufferGeometry:selectedPoint byDistance:searchExtent];
+    AGSQueryParameters *queryParams = [AGSQueryParameters queryParameters];
+    queryParams.geometry = visiblePolygon;
+    queryParams.returnGeometry = YES;
+    queryParams.whereClause = @"1=1";
+    [featureLayer setVisible:NO];
+    featureLayer.definitionExpression = @"1=1";
+    __block NSString *needStr = @"";
+    typeof(self) weakSelf = self;
+    
+    [featureTable queryFeaturesWithParameters:queryParams queryFeatureFields:AGSQueryFeatureFieldsIDsOnly completion:^(AGSFeatureQueryResult * _Nullable result, NSError * _Nullable error) {
+        
+        if (error)
+        {
+            NSLog(@"error = %@",error);
+        }
+        
+        AGSFeatureEnumerator *featureEnumerator = [result featureEnumerator];
+        NSArray *allObjects = featureEnumerator.allObjects;
+        
+        for (AGSFeature *tempFeature in allObjects)
+        {
+            AGSGeometry *tempGeometry = tempFeature.geometry;
+            
+            BOOL isContain = [AGSGeometryEngine geometry:tempGeometry withinGeometry:visiblePolygon];
+
+            if(isContain)
+            {
+                NSString *objectID = tempFeature.attributes[@"OBJECTID"];
+
+                if(objectID)
+                {
+                    if(needStr.length == 0)
+                    {
+                        needStr = [needStr stringByAppendingFormat:@"OBJECTID = %@",objectID];
+                    }
+                    else
+                    {
+                        needStr = [needStr stringByAppendingFormat:@" or OBJECTID = %@",objectID];
+                    }
+                }
+            }
+        }
+        
+        if (weakSelf.SearchPointBlock) {
+            weakSelf.SearchPointBlock(allObjects);
+        }
+        
+        featureLayer.definitionExpression = needStr;
+        featureLayer.visible = YES;
+        
+        AGSViewpoint *point = [[AGSViewpoint alloc]initWithCenter:selectedPoint scale:11800];
+        [self.mapView setViewpoint:point];
+        
+    }];
+
 }
 
 @end

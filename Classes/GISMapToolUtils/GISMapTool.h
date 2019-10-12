@@ -35,6 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**  返回点击地点结果 */
 @property (copy, nonatomic) void(^GraphicsOverlayBlock)(NSArray *featureArr,AGSPoint *tapLocation);
 
+/**  返回搜索地点周边结果 */
+@property (copy, nonatomic) void(^SearchPointBlock)(NSArray *DataArray);
+
 #pragma mark 初始化类
 -(instancetype)initWithAGSMapView:(AGSMapView *)mapView;
 
@@ -64,8 +67,25 @@ NS_ASSUME_NONNULL_BEGIN
  @param layerId 图层ID(便于区分)
  @param url 图层URL地址
  */
-#pragma mark 添加资源图层
+#pragma mark 添加单资源图层
 - (void)AddResourceLayer:(AGSMapView *)mapView MapViewScale:(double)scale ResourceLayerId:(NSString *)layerId ResourceLayerUrl:(NSString *)url;
+
+#pragma mark 添加多层资源图层
+ /*
+添加多层资源图层
+@param mapView 需要添加图层的地图
+@param mapLayers 图层数组.（字典格式 {@"Name"：@“ ”，@“Url”：@” “}）
+ */
+- (void)AddResourceLayer:(AGSMapView *)mapView ResourceLayers:(NSArray <NSDictionary *>*)mapLayers;
+
+
+#pragma mark 搜索图层周边
+/*
+@param selectedPoint 搜索点(使用投影坐标)
+@param featureTable 图层
+@param searchExtent 搜索范围
+*/
+- (void)searchMapDataPoint:(AGSPoint *)selectedPoint FeatureTable:(AGSServiceFeatureTable *)SearchFeatureTable SearchExtent:(double)searchExtent;
 
 #pragma mark 移除资源图层
 - (void)removeResourceLayerForKey:(id)key;
