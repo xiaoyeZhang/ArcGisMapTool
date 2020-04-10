@@ -32,7 +32,7 @@ class TianDiTuLayer: AGSImageTiledLayer {
                 break;
             }
             
-            let requestUrl1 = mainURL + "&TILEMATRIX=%ld&TILEROW=%ld&TILECOL=%ld&FORMAT=tiles&tk=b51f69b1d856cb9cfa9400f889646b38"
+            let requestUrl1 = mainURL + "&TILEMATRIX=%ld&TILEROW=%ld&TILECOL=%ld&FORMAT=tiles&tk=7fc4ee9c3af380e16276a965efa3f75c"
 
             let requestUrl = NSString(format: requestUrl1 as NSString, tileKey.column % 8 , tiandituLayerInfo.servicename , tiandituLayerInfo.layername , tiandituLayerInfo.tilematrixset , (tileKey.level + 1) , tileKey.row , tileKey.column) as String
             
